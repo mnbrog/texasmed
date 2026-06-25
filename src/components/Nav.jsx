@@ -9,8 +9,8 @@ const Nav = ({ active }) => {
       <LogoWrapper>
         <a href="/">
           <img
-            src="/images/Upright Medical Solutions Logo.png"
-            alt="Upright Medical Solutions"
+            src="/images/Gulf Texas Medical Logo.png"
+            alt="Gulf Texas Medical Supply"
           />
         </a>
       </LogoWrapper>
@@ -25,41 +25,9 @@ const Nav = ({ active }) => {
             Home
           </a>
         </li>
-        <li className="dropdown">
-          <a
-            href="#"
-            className={`dropdown-toggle ${
-              active === "fall-risk" || active === "pulse4pulse" ? "active" : ""
-            }`}
-          >
-            Products
-          </a>
-          <ul className="dropdown-menu">
-            <li>
-              <a
-                href="/fall-risk"
-                className={active === "fall-risk" ? "active" : ""}
-              >
-                Fall Risk
-              </a>
-            </li>
-            <li>
-              <a
-                href="/Pulse4Pulse"
-                className={active === "pulse4pulse" ? "active" : ""}
-              >
-                Pulse4Pulse
-              </a>
-            </li>
-          </ul>
-        </li>
+      
         <li>
-          <a href="/about" className={active === "about" ? "active" : ""}>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="/#contact" className={active === "contact" ? "active" : ""}>
+          <a href="/contact" className={active === "contact" ? "active" : ""}>
             Contact
           </a>
         </li>

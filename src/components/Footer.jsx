@@ -11,7 +11,7 @@ const FooterWrapper = styled.footer`
 
 const Footer = () => (
   <FooterWrapper>
-    <p>&copy; {new Date().getFullYear()} Upright Medical Solutions. All Rights Reserved.</p>
+    <p>&copy; {new Date().getFullYear()} Gulf Texas Medical Supply. All Rights Reserved.</p>
   </FooterWrapper>
 );
 

@@ -104,7 +104,7 @@ const WhoWeHelp = () => {
         <p style={{ maxWidth: '600px', margin: '0 auto 1.5rem auto' }}>
           We would welcome the opportunity to discuss the value this Fall Risk program could bring to your practice.
         </p>
-        <HeroButton href="/#contact">Schedule a Consultation</HeroButton>
+        <HeroButton href="/contact">Schedule a Consultation</HeroButton>
       </CTAWrapper>
     </Section>
   );

@@ -31,8 +31,8 @@ const Contact = ({ isPulsePage = false }) => (
         </ContactParagraph>
 
         <ContactDetail>
-          <FaEnvelope color="#3FD0C9" size="24" />
-          <a href="mailto:info@uprightmedicalsolutions.com">info@uprightmedicalsolutions.com</a>
+          <FaEnvelope color="#darkBlue" size="24" />
+          <a href="mailto:sales@gulftexas.com">sales@gulftexas.com</a>
         </ContactDetail>
       </ContactInfo>
       
@@ -52,7 +52,6 @@ const Contact = ({ isPulsePage = false }) => (
         
         <select name="subject" required defaultValue="">
           <option value="" disabled>I'm interested in...</option>
-          <option value="Pulse4Pulse Inquiry">Pulse4Pulse Inquiry</option>
           <option value="Fall Risk Inquiry">Fall Risk Inquiry</option>
           <option value="Demo Request">Requesting a Demo</option>
           <option value="Pricing Information">Pricing Information</option>

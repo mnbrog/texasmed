@@ -4,10 +4,10 @@ import styled from "styled-components";
 
 export const COLORS = {
   darkBlue: "#0A2640",
-  teal: "#3FD0C9",
+  teal: "#1868cf",
   cardBg: "#FFFFFF",
   // FIX 1: Added missing color definitions
-  lightTeal: "#A7F3D0",
+  lightTeal: "#color(srgb 0.11 0.19 0.4)",
   seriousRed: "#EF4444",
   neutralGray: "#6B7280",
   lightBg: "#F9FAFB",
@@ -18,40 +18,88 @@ export const NavBar = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
+  max-width: 100vw;
   background: ${COLORS.cardBg};
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 200;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 0.5rem;
+  justify-content: center;
+
+  padding: 0.75rem 1rem 0.65rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0.7rem 3.5rem 0.7rem;
+  }
 `;
 
 
 
 export const LogoWrapper = styled.div`
-  margin: 1rem 0 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 0.35rem;
+  box-sizing: border-box;
+  min-width: 0;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-width: 0;
+  }
 
   img {
-    display: block;
-    height: 100px;
-    width: auto;
-  }
+  display: block;
+  width: clamp(280px, 36vw, 520px);
+  max-width: min(92vw, 520px);
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+}
 
-  @media (min-width: 600px) {
-    img {
-      height: 140px;
-    }
+@media (max-width: 768px) {
+  margin-bottom: 0;
+
+  img {
+    width: clamp(200px, 66vw, 320px);
+    max-width: 82vw;
+    max-height: 130px;
   }
+}
+
+@media (max-width: 420px) {
+  img {
+    width: clamp(170px, 72vw, 250px);
+    max-width: 78vw;
+    max-height: 105px;
+  }
+}
 `;
+
 
 export const NavLinks = styled.ul`
   list-style: none;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: clamp(0.35rem, 2vw, 1rem);
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
+  width: 100%;
+  max-width: 1000px;
   position: relative;
+  box-sizing: border-box;
 
   > li {
     position: relative;
@@ -60,8 +108,8 @@ export const NavLinks = styled.ul`
   a,
   button {
     display: block;
-    padding: 0.5rem 0.75rem;
-    font-size: 1rem;
+    padding: 0.45rem 0.7rem;
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
     background: none;
     border: none;
     text-align: left;
@@ -69,6 +117,8 @@ export const NavLinks = styled.ul`
     width: 100%;
     color: ${COLORS.darkBlue};
     transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+    text-decoration: none;
+    white-space: nowrap;
   }
 
   a:hover,
@@ -87,7 +137,8 @@ export const NavLinks = styled.ul`
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: ${COLORS.cardBg};
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     margin: 0;
@@ -110,20 +161,26 @@ export const NavLinks = styled.ul`
   ul li ul {
     top: 0;
     left: 100%;
+    transform: none;
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
+
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 260px;
+    width: min(78vw, 280px);
+
+    padding: 6rem 1rem 1rem;
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     background: ${COLORS.cardBg};
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    z-index: 199;
 
     &.open {
       transform: translateX(0);
@@ -133,13 +190,19 @@ export const NavLinks = styled.ul`
       width: 100%;
     }
 
-    > li > ul {
-      position: static;
-      box-shadow: none;
+    a,
+    button {
+      font-size: 1rem;
+      padding: 0.75rem;
+      white-space: normal;
     }
 
-    > li.open > ul {
-      display: block;
+    ul {
+      position: static;
+      transform: none;
+      box-shadow: none;
+      min-width: 100%;
+      padding-left: 0.75rem;
     }
 
     ul li ul {
@@ -147,6 +210,8 @@ export const NavLinks = styled.ul`
     }
   }
 `;
+
+
 
 export const Section = styled.section`
   max-width: 1100px;
@@ -680,7 +745,7 @@ export const ContactDetail = styled.div`
     transition: color 0.2s ease;
 
     &:hover {
-      color: ${COLORS.teal};
+      color: ${COLORS.darkBlue};
     }
   }
 `;

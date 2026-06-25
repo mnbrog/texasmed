@@ -1,10 +1,10 @@
 var plugins = [{
       name: 'gatsby-plugin-styled-components',
-      plugin: require('C:/Users/mnbro/upright-medical/node_modules/gatsby-plugin-styled-components/gatsby-ssr.js'),
+      plugin: require('C:/Users/mnbro/texasmed/texasmed/node_modules/gatsby-plugin-styled-components/gatsby-ssr.js'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false,"disableVendorPrefixes":false},
     },{
       name: 'partytown',
-      plugin: require('C:/Users/mnbro/upright-medical/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
+      plugin: require('C:/Users/mnbro/texasmed/texasmed/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
       options: {"plugins":[]},
     }]
 /* global plugins */

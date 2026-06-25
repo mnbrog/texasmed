@@ -29,7 +29,7 @@ export default createGlobalStyle`
     width: 8px;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #3FD0C9;
+    background-color: #darkBlue;
     border-radius: 4px;
   }
 `;

@@ -2,8 +2,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Upright Medical Solutions`,
-    description: `Predict Risk. Prevent Falls. – Gatsby single-page site for Fall Risk Assessment.`,
+    title: `Texas Medical Supply`,
+    description: ``,
     author: `@mnbrog`,
   },
   plugins: [

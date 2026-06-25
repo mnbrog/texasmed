@@ -90,7 +90,7 @@ const FraResearch = () => {
       
       {/* Suggestion 3: Authority-Building CTA */}
       <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-        <SecondaryButton href="/#contact">Request a Whitepaper</SecondaryButton>
+        <SecondaryButton href="/contact">Contact Us</SecondaryButton>
       </div>
     </Section>
   );
